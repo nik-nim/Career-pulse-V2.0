@@ -3,6 +3,7 @@
 ---
 
 ## Table of Contents
+
 1. [Executive Summary](#executive-summary)
 2. [Problem Statement](#problem-statement)
 3. [Market Research](#market-research)
@@ -35,20 +36,21 @@
 
 ### Key Metrics
 
-| Metric | Value |
-|--------|-------|
-| Development Time | 2 weeks |
-| Team Size | 2 developers |
-| Lines of Code | ~3,500 |
-| API Endpoints | 18 |
-| Database Tables | 6 |
-| Frontend Pages | 8 |
-| Infrastructure Cost | $0/month |
+| Metric                | Value                    |
+| --------------------- | ------------------------ |
+| Development Time      | 2 weeks                  |
+| Team Size             | 2 developers             |
+| Lines of Code         | ~3,500                   |
+| API Endpoints         | 18                       |
+| Database Tables       | 6                        |
+| Frontend Pages        | 8                        |
+| Infrastructure Cost   | $0/month                 |
 | External Dependencies | 0 (no API keys required) |
 
 ### Core Value Proposition
 
 Job seekers typically juggle 5-7 different tools during their search:
+
 - LinkedIn/Indeed for job discovery
 - Excel/Google Sheets for tracking
 - Google Calendar for interviews
@@ -67,6 +69,7 @@ Job seekers typically juggle 5-7 different tools during their search:
 Through user research with 50+ job seekers, we identified these pain points:
 
 #### 1. Tool Fragmentation
+
 [Job Boards] → [Spreadsheet] → [Calendar] → [Notes App] → [Email]
 ↓ ↓ ↓ ↓ ↓
 Find jobs Track apps Schedule Prepare Follow up
@@ -74,6 +77,7 @@ Find jobs Track apps Schedule Prepare Follow up
 text
 
 This leads to:
+
 - Lost applications
 - Missed follow-ups
 - No holistic view of progress
@@ -83,6 +87,7 @@ This leads to:
 #### 2. Lack of Progress Visibility
 
 Job seekers couldn't answer basic questions:
+
 - "How many applications have I sent this week?"
 - "What's my interview-to-application ratio?"
 - "Which companies are in which stage?"
@@ -111,18 +116,21 @@ Job seekers couldn't answer basic questions:
 ### User Personas
 
 #### Persona 1: Recent Graduate
+
 - **Name**: Priya, 22
 - **Background**: B.Tech Computer Science
 - **Pain Points**: First job search, no experience, doesn't know where to start
 - **Needs**: Structured approach, interview prep, resume help
 
 #### Persona 2: Career Switcher
+
 - **Name**: Rahul, 30
 - **Background**: 5 years in marketing, switching to data science
 - **Pain Points**: Learning new skills while job hunting, portfolio building
 - **Needs**: Skill tracking, targeted applications, progress visibility
 
 #### Persona 3: Experienced Professional
+
 - **Name**: Anita, 38
 - **Background**: 12 years in software engineering
 - **Pain Points**: Managing multiple offers, salary negotiation, senior-level interviews
@@ -134,18 +142,19 @@ Job seekers couldn't answer basic questions:
 
 ### Competitive Landscape
 
-| Product | Type | Price | Strengths | Weaknesses |
-|---------|------|-------|-----------|------------|
-| LinkedIn Jobs | Job Board | Free | Large database | No tracking |
-| Indeed | Job Board | Free | Search | No management |
-| Huntr | Tracker | $40/mo | Kanban board | No AI, expensive |
-| Teal | Tracker | $9/mo | Chrome extension | Limited features |
-| JibberJobber | CRM | $60/yr | Contact management | Outdated UI |
-| **CareerPulse** | **All-in-one** | **Free** | **Everything integrated** | **New product** |
+| Product         | Type           | Price    | Strengths                 | Weaknesses       |
+| --------------- | -------------- | -------- | ------------------------- | ---------------- |
+| LinkedIn Jobs   | Job Board      | Free     | Large database            | No tracking      |
+| Indeed          | Job Board      | Free     | Search                    | No management    |
+| Huntr           | Tracker        | $40/mo   | Kanban board              | No AI, expensive |
+| Teal            | Tracker        | $9/mo    | Chrome extension          | Limited features |
+| JibberJobber    | CRM            | $60/yr   | Contact management        | Outdated UI      |
+| **CareerPulse** | **All-in-one** | **Free** | **Everything integrated** | **New product**  |
 
 ### Market Gap
 
 The market is split between:
+
 1. **Free but single-purpose**: LinkedIn, Indeed (job discovery only)
 2. **Paid but limited**: Huntr, Teal (tracking only, $100-500/yr)
 3. **Enterprise ATS**: Greenhouse, Lever (for recruiters, not job seekers)
@@ -168,6 +177,7 @@ The market is split between:
 > "One dashboard for your entire job search journey"
 
 ### Core Modules
+
 ┌─────────────────────────────────────────────────────────┐
 │ CareerPulse │
 ├─────────────┬─────────────┬─────────────┬──────────────┤
@@ -189,6 +199,7 @@ The market is split between:
 text
 
 ### User Journey
+
 Register → 2. Complete Profile → 3. Upload Resume
 ↓ ↓ ↓
 
@@ -207,6 +218,7 @@ text
 ## Technical Architecture
 
 ### High-Level Architecture
+
 ┌──────────────────────────────────────────────────────────────┐
 │ Client Browser │
 │ ┌────────────────────────────────────────────────────────┐ │
@@ -252,24 +264,25 @@ text
 
 ### Technology Stack Details
 
-| Layer | Technology | Version | Purpose |
-|-------|------------|---------|---------|
-| **Frontend Framework** | React | 18.3 | UI components |
-| **Frontend Language** | TypeScript | 5.4 | Type safety |
-| **Styling** | TailwindCSS | 3.4 | Utility-first CSS |
-| **Build Tool** | Vite | 5.2 | Fast dev server |
-| **Routing** | React Router | 6.23 | Client-side routing |
-| **Notifications** | react-hot-toast | 2.4 | Toast messages |
-| **Backend Framework** | FastAPI | 0.110 | REST API |
-| **Backend Language** | Python | 3.12 | Server logic |
-| **ORM** | SQLAlchemy | 2.0 | Database operations |
-| **Database** | SQLite/PostgreSQL | - | Data storage |
-| **Auth** | python-jose | 3.3 | JWT tokens |
-| **Password Hashing** | bcrypt | 4.0 | Security |
-| **HTTP Client** | httpx | 0.27 | API calls, scraping |
-| **Scraping** | BeautifulSoup4 | 4.12 | HTML parsing |
+| Layer                  | Technology        | Version | Purpose             |
+| ---------------------- | ----------------- | ------- | ------------------- |
+| **Frontend Framework** | React             | 18.3    | UI components       |
+| **Frontend Language**  | TypeScript        | 5.4     | Type safety         |
+| **Styling**            | TailwindCSS       | 3.4     | Utility-first CSS   |
+| **Build Tool**         | Vite              | 5.2     | Fast dev server     |
+| **Routing**            | React Router      | 6.23    | Client-side routing |
+| **Notifications**      | react-hot-toast   | 2.4     | Toast messages      |
+| **Backend Framework**  | FastAPI           | 0.110   | REST API            |
+| **Backend Language**   | Python            | 3.12    | Server logic        |
+| **ORM**                | SQLAlchemy        | 2.0     | Database operations |
+| **Database**           | SQLite/PostgreSQL | -       | Data storage        |
+| **Auth**               | python-jose       | 3.3     | JWT tokens          |
+| **Password Hashing**   | bcrypt            | 4.0     | Security            |
+| **HTTP Client**        | httpx             | 0.27    | API calls, scraping |
+| **Scraping**           | BeautifulSoup4    | 4.12    | HTML parsing        |
 
 ### Data Flow Diagram
+
 User Action → React Component → State Update → API Call
 ↓
 FastAPI Router
@@ -295,6 +308,7 @@ text
 **Goal**: Running backend with database and auth
 
 **Tasks Completed**:
+
 - [x] Set up FastAPI project structure
 - [x] Configure SQLAlchemy with async SQLite
 - [x] Create all 6 database models
@@ -328,6 +342,7 @@ text
 **Goal**: Working frontend with all basic features
 
 **Tasks Completed**:
+
 - [x] Set up React with Vite and TypeScript
 - [x] Configure TailwindCSS with dark mode
 - [x] Build sidebar navigation layout
@@ -341,6 +356,7 @@ text
 **Key Decision**: Single-file App.tsx approach for rapid development instead of multi-file component structure.
 
 **Challenges**:
+
 1. **React Router nested routes**: Solved with `/*` wildcard and Layout wrapper
 2. **CORS errors**: Added `allow_origins=["*"]` middleware
 3. **Form submissions**: Added `e.preventDefault()` to all forms
@@ -350,6 +366,7 @@ text
 **Goal**: Application tracker, interviews, daily logs
 
 **Tasks Completed**:
+
 - [x] Build Application Tracker with status pipeline
 - [x] Create Interview Scheduler
 - [x] Build Daily Activity Logger
@@ -367,6 +384,7 @@ text
 **Goal**: AI features, testing, documentation
 
 **Tasks Completed**:
+
 - [x] Build Cover Letter Generator
 - [x] Create Interview Question Bank
 - [x] Build Mock Interview Simulator
@@ -385,6 +403,7 @@ text
 ## Database Design
 
 ### Entity Relationship Diagram
+
 ┌─────────────────────────────────────────────────────────────────┐
 │ users │
 │ ┌─────────────────────────────────────────────────────────────┐│
@@ -433,17 +452,17 @@ text
 
 ### Schema Design Decisions
 
-| Decision | Rationale |
-|----------|-----------|
-| UUID primary keys | Avoid sequential ID guessing |
-| JSON for skills array | SQLite doesn't support ARRAY type |
-| String dates | Simpler than DateTime for cross-platform |
-| Separate tables for each entity | Clean separation, easy queries |
-| Cascade deletes | Automatic cleanup when user deleted |
+| Decision                        | Rationale                                |
+| ------------------------------- | ---------------------------------------- |
+| UUID primary keys               | Avoid sequential ID guessing             |
+| JSON for skills array           | SQLite doesn't support ARRAY type        |
+| String dates                    | Simpler than DateTime for cross-platform |
+| Separate tables for each entity | Clean separation, easy queries           |
+| Cascade deletes                 | Automatic cleanup when user deleted      |
 
 ### Indexing Strategy
 
-```sql
+sql
 -- Users
 CREATE INDEX idx_users_email ON users(email);
 
@@ -647,7 +666,7 @@ Auto-adds found skills to user profile
 Returns list of discovered skills
 
 python
-keywords = ['Python', 'Java', 'React', 'SQL', 'AWS', 'Docker', 
+keywords = ['Python', 'Java', 'React', 'SQL', 'AWS', 'Docker',
             'Kubernetes', 'Machine Learning', 'JavaScript', 'TypeScript',
             'Node.js', 'MongoDB', 'PostgreSQL', 'Git', 'Agile']
 
@@ -1035,3 +1054,4 @@ Authors: CareerPulse Development Team
 License: MIT
 
 This case study was written to document the complete journey of building CareerPulse, from problem identification through implementation to deployment. It serves as both a technical reference and a project portfolio piece.
+```
