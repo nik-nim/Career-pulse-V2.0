@@ -197,13 +197,16 @@ python seed_data.py
 uvicorn app.main:app --reload
 Backend runs at: http://localhost:8000
 API Docs: http://localhost:8000/docs
+```
+###Frontend Setup
+```bash
 
-Frontend Setup
 bash
 cd frontend
 npm install
 npm run dev
 Frontend runs at: http://localhost:3000
+```
 
 📡 API Endpoints
 Authentication
@@ -211,10 +214,12 @@ Method	Endpoint	Description
 POST	/api/v1/auth/register	Register new user
 POST	/api/v1/auth/login	Login & get token
 Jobs
+
 Method	Endpoint	Description
 GET	/api/v1/jobs	List all jobs
 POST	/api/v1/jobs/scrape	Scrape live jobs
 Profile
+
 Method	Endpoint	Description
 GET	/api/v1/profile	Get user profile
 PUT	/api/v1/profile	Update profile
@@ -228,12 +233,15 @@ POST	/api/v1/profile/interviews	Schedule interview
 GET	/api/v1/profile/daily-logs	Get daily logs
 POST	/api/v1/profile/daily-logs	Save daily log
 AI Tools
+
 Method	Endpoint	Description
 POST	/api/v1/ai/cover-letter	Generate cover letter
 GET	/api/v1/ai/interview-questions	Get interview questions
 GET	/api/v1/ai/mock-interview	Mock interview
 GET	/api/v1/ai/resume-tips	Resume writing tips
+
 🗄️ Database Schema
+```
 text
 users
 ├── id (UUID)
@@ -283,6 +291,7 @@ jobs
 ├── salary_min, salary_max
 ├── source, source_url
 └── is_active
+```
 🎯 Feature Roadmap
 ✅ Completed
 User authentication (register/login)
@@ -358,7 +367,7 @@ Open a Pull Request
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 👤 Author
-CareerPulse Team
+Nikhil Nim
 
 🙏 Acknowledgments
 FastAPI for the amazing backend framework
