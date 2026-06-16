@@ -1,0 +1,16 @@
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.git/
+.env
+*.log
+dist/
+build/
+.coverage
+htmlcov/
+.pytest_cache/
+*.db
+*.sqlite3
+.vscode/
+.idea/

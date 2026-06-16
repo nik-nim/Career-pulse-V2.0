@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Database
+*.db
+*.sqlite3
+*.sqlite
+
+# Node
+node_modules/
+frontend/dist/
+frontend/build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Docker
+.docker/
+
+# OS
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temp
+tmp/
+temp/
+*.tmp
